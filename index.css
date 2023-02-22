@@ -1,0 +1,31 @@
+.title {
+    text-align: center;
+}
+
+.level-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.scale {
+    text-align: center;
+}
+
+.fingering {
+    text-align: center;
+}
+
+.next-reset-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    margin: 5px
+  }
