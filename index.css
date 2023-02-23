@@ -8,6 +8,11 @@
     gap: 10px;
 }
 
+.level-button-selected {
+    background-color: black;
+    color: white;
+}
+
 .scale {
     text-align: center;
 }
