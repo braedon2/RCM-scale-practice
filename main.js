@@ -1,5 +1,5 @@
-import {state} from "./state.js"
-import { levelButtons, nextButton, resetButton, updateView } from "./view.js"
+import {state} from "./modules/state.js"
+import { levelButtons, nextButton, resetButton, updateView } from "./modules/view.js"
 
 updateView(state)
 
