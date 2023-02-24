@@ -1,10 +1,13 @@
 const levelButtons = document.querySelectorAll(".level-container button")
-const scaleDisplay = document.querySelector(".scale")
 const [nextButton, resetButton] = document.querySelectorAll(".next-reset-container button")
+const scaleDisplay = document.querySelector(".scale")
+const fingeringDisplay = document.querySelector(".fingering")
+
 
 function updateView(state) {
     updateLevelButtons(state)
     updateScaleDisplay(state)
+    updateFingeringDisplay(state)
     updateNextButton(state)
 }
 
@@ -20,6 +23,10 @@ function updateLevelButtons(state) {
 
 function updateScaleDisplay(state) {
     scaleDisplay.textContent = state.currentScale
+}
+
+function updateFingeringDisplay(state) {
+    fingeringDisplay.textContent = `${state.pattern}, ${state.stroke}`
 }
 
 function updateNextButton(state) {
