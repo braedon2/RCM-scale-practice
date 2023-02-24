@@ -2,6 +2,7 @@ const levelButtons = document.querySelectorAll(".level-container button")
 const [nextButton, resetButton] = document.querySelectorAll(".next-reset-container button")
 const scaleDisplay = document.querySelector(".scale")
 const fingeringDisplay = document.querySelector(".fingering")
+const progressDisplayText = document.querySelector(".progress-text")
 
 
 function updateView(state) {
@@ -9,6 +10,7 @@ function updateView(state) {
     updateScaleDisplay(state)
     updateFingeringDisplay(state)
     updateNextButton(state)
+    updateProgressDisplay(state)
 }
 
 function updateLevelButtons(state) {
@@ -36,6 +38,10 @@ function updateNextButton(state) {
     else {
         nextButton.disabled = false
     }
+}
+
+function updateProgressDisplay(state) {
+    progressDisplayText.textContent = `${state.i + 1} of ${state.scales.length}`
 }
 
 export { 

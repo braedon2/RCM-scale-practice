@@ -27,6 +27,10 @@
     gap: 10px;
 }
 
+.progress-text {
+    text-align: center;
+}
+
 .footer {
     position:fixed;
     bottom:0;
