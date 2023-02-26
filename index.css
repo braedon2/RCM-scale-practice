@@ -1,11 +1,22 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: Arial,sans-serif;
     color: #333;
     margin: 0px;
     padding: 0px;
+    height: 100%;
 }
 
-header{
+.box {
+    display: flex;
+    height: 100%;
+    flex-flow: column;
+}
+
+header {
     color: #ffffff;
     background-color: #a9a7a8;
     border-color: #e7e7e7;
@@ -15,6 +26,7 @@ header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex: 0 1 auto;
 }
 
 h1 {
@@ -30,6 +42,10 @@ h3 {
     font-weight: normal;
 }
 
+p {
+    font-size: 18px;
+}
+
 img {
     width: 100px;
     height: 100px;
@@ -43,6 +59,47 @@ button {
     border: 2px solid;
     width: 100px;
     height: 50px;
+    background-color: white;
+}
+
+#level1 {
+    border-color: #ffa503;
+    color: #ffa503;
+}
+
+#level1.level-button-selected {
+    color: white;
+    background-color: #ffa503;
+}
+
+#level2 {
+    border-color: #df3c31;
+    color: #df3c31;
+}
+
+#level2.level-button-selected {
+    color: white;
+    background-color: #df3c31;
+}
+
+#level3 {
+    border-color: #60255c;
+    color: #60255c;
+}
+
+#level3.level-button-selected {
+    color: white;
+    background-color: #60255c;
+}
+
+#level4 {
+    border-color: #0269c9;
+    color: #0269c9;
+}
+
+#level4.level-button-selected {
+    color: white;
+    background-color: #0269c9;
 }
 
 .header-text {
@@ -61,15 +118,14 @@ button {
 }
 
 .scale {
-    margin-top: 100px;
-    margin-bottom: 10px;
     font-size: 48px;
     text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .fingering {
     text-align: center;
-    margin-bottom: 100px;
 }
 
 .next-reset-container {
@@ -86,18 +142,17 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1 1 auto
 }
 
 footer {
     color: #ffffff;
     background-color: #a9a7a8;
     border-color: #e7e7e7;
-    position:fixed;
-    bottom:0;
-    left:0;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex: 0 1 auto
 }
 
 footer span {
