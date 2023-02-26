@@ -102,6 +102,26 @@ button {
     background-color: #0269c9;
 }
 
+#level5 {
+    border-color: #088d6c;
+    color: #088d6c;
+}
+
+#level5.level-button-selected {
+    color: white;
+    background-color: #088d6c;
+}
+
+#level6 {
+    border-color: #1b1f27;
+    color: #1b1f27;
+}
+
+#level6.level-button-selected {
+    color: white;
+    background-color: #1b1f27;
+}
+
 .header-text {
     margin-left: 10px;
 }

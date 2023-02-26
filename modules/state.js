@@ -11,11 +11,11 @@ class State {
         this.i += 1
         this.currentScale = this.scales[this.i]
 
-        // want to make sure all combinations of patterns and styles are covered
-        // choose a random combination after all eight combinations have been covered
-        if (this.i < 8) {
-            this.pattern = this.patterns[this.i % 4]
-            if (this.i < 4) {
+        // want to make sure all combinations of patterns and strokes are covered
+        // choose a random combination after all combinations have been covered
+        if (this.i < this.patterns.length * 2) {
+            this.pattern = this.patterns[this.i % this.patterns.length]
+            if (this.i < this.patterns.length) {
                 this.stroke = strokes[0]
             }
             else {
