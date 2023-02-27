@@ -97,5 +97,17 @@ export const levelData = {
             "Chromatic on D"
         ],
         "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
+    },
+    "Level 7": {
+        "scales": [
+            "hi"
+        ],
+        "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
+    },
+    "Level 8": {
+        "scales": [
+            "hi"
+        ],
+        "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
     }
 }

@@ -122,6 +122,26 @@ button {
     background-color: #1b1f27;
 }
 
+#level7 {
+    border-color: #5e2119;
+    color: #5e2119;
+}
+
+#level7.level-button-selected {
+    color: white;
+    background-color: #5e2119;
+}
+
+#level8 {
+    border-color: #352125;
+    color: #352125;
+}
+
+#level8.level-button-selected {
+    color: white;
+    background-color: #352125;
+}
+
 .header-text {
     margin-left: 10px;
 }
@@ -129,7 +149,13 @@ button {
 .level-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.level-container div {
+    display: flex;
+    gap: 8px
 }
 
 .level-button-selected {
