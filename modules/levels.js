@@ -106,7 +106,7 @@ export const levelData = {
     },
     "Level 8": {
         "scales": [
-            "hi"
+            "hi, hello"
         ],
         "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
     }
