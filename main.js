@@ -1,25 +1,25 @@
-import {state} from "./modules/state.js"
-import { levelButtons, nextButton, resetButton, updateView } from "./modules/view.js"
+import { state } from "./modules/state.js"
+import { View } from "./modules/view.js"
 
-updateView(state)
+let view = new View(state)
 
-for (const button of levelButtons) {
+for (const button of view.levelButtons) {
     button.addEventListener("click", levelButtonListener)
 }
-nextButton.addEventListener("click", nextButtonListener)
-resetButton.addEventListener("click", resetButtonListener)
+view.nextButton.addEventListener("click", nextButtonListener)
+view.resetButton.addEventListener("click", resetButtonListener)
 
 function levelButtonListener(event) {
     state.setLevel(event.target.textContent)
-    updateView(state)
+    view.updateView(state)
 }
 
 function nextButtonListener() {
     state.setNextScale()
-    updateView(state)
+    view.updateView(state)
 }
 
 function resetButtonListener() {
     state.reset()
-    updateView(state)
+    view.updateView(state)
 }

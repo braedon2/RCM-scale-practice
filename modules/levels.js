@@ -12,7 +12,8 @@ export const levelData = {
             "D Minor Melodic",
             "Chromatic on D"
         ],
-        "patterns": ["im", "mi", "ma", "am"]
+        "patterns": ["im", "mi", "ma", "am"],
+        "color": "#ffa503"
     },
     "Level 2": {
         "scales": [
@@ -27,7 +28,8 @@ export const levelData = {
             "F# Minor Melodic",
             "Chromatic on A"
         ],
-        "patterns": ["im", "mi", "ma", "am"]
+        "patterns": ["im", "mi", "ma", "am"],
+        "color": "#df3c31"
     },
     "Level 3": {
         "scales": [
@@ -42,7 +44,8 @@ export const levelData = {
             "G Minor Melodic",
             "Chromatic on A"
         ],
-        "patterns": ["im", "mi", "ma", "am"]
+        "patterns": ["im", "mi", "ma", "am"],
+        "color": "#60255c"
     },
     "Level 4": {
         "scales": [
@@ -57,7 +60,8 @@ export const levelData = {
             "F Minor Melodic",
             "Chromatic on B"
         ],
-        "patterns": ["im", "mi", "ma", "am"]
+        "patterns": ["im", "mi", "ma", "am"],
+        "color": "#0269c9"
     },
     "Level 5": {
         "scales": [
@@ -75,7 +79,8 @@ export const levelData = {
             "B♭ Minor Melodic",
             "Chromatic on C"
         ],
-        "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
+        "patterns": ["im", "mi", "ma", "am", "ia", "ai"],
+        "color": "#088d6c"
     },
     "Level 6": {
         "scales": [
@@ -96,18 +101,22 @@ export const levelData = {
             "G Minor Melodic",
             "Chromatic on D"
         ],
-        "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
+        "patterns": ["im", "mi", "ma", "am", "ia", "ai"],
+        "color": "#1b1f27"
+
     },
     "Level 7": {
         "scales": [
             "hi"
         ],
-        "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
+        "patterns": ["im", "mi", "ma", "am", "ia", "ai"],
+        "color": "#5e2119"
     },
     "Level 8": {
         "scales": [
             "hi, hello"
         ],
-        "patterns": ["im", "mi", "ma", "am", "ia", "ai"]
+        "patterns": ["im", "mi", "ma", "am", "ia", "ai"],
+        "color": "#352125"
     }
 }

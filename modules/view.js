@@ -1,52 +1,87 @@
-const levelButtons = document.querySelectorAll(".level-container button")
-const [nextButton, resetButton] = document.querySelectorAll(".next-reset-container button")
-const scaleDisplay = document.querySelector(".scale")
-const fingeringDisplay = document.querySelector(".fingering")
-const progressDisplayText = document.querySelector(".progress-text")
+import { levelData } from "./levels.js"
 
+class View {
+    constructor(model) {
+        this.levelButtons = []
+        this.nextButton = document.querySelectorAll(".next-reset-container button")[0]
+        this.resetButton = document.querySelectorAll(".next-reset-container button")[1]
+        this.scaleDisplay = document.querySelector(".scale")
+        this.fingeringDisplay = document.querySelector(".fingering")
+        this.progressDisplayText = document.querySelector(".progress-text")
 
-function updateView(state) {
-    updateLevelButtons(state)
-    updateScaleDisplay(state)
-    updateFingeringDisplay(state)
-    updateNextButton(state)
-    updateProgressDisplay(state)
-}
+        this.initView()
+        this.updateView(model)
+    }
 
-function updateLevelButtons(state) {
-    for (const button of levelButtons) {
-        button.classList.remove("level-button-selected")
+    initView() {
+        this.initLevelButtons()
+    }
 
-        if (button.textContent == state.level) {
-            button.classList.add("level-button-selected")
+    updateView(model) {
+        this.updateLevelButtons(model)
+        this.updateScaleDisplay(model)
+        this.updateFingeringDisplay(model)
+        this.updateNextButton(model)
+        this.updateProgressDisplay(model)
+    }
+
+    initLevelButtons() {
+        const button_container = document.querySelector(".level-container")
+        const buttonsToRender = Object.keys(levelData)
+        const firstRowToRender = buttonsToRender.slice(0, buttonsToRender.length/2)
+        const secondRowToRender = buttonsToRender.slice(buttonsToRender.length/2)
+
+        for (let row of [firstRowToRender, secondRowToRender]) {
+            let div = document.createElement("div")
+            button_container.appendChild(div)
+
+            for (let label of row) {
+                let buttonColor = levelData[label].color
+                let button = document.createElement("button")
+                button.style.color = buttonColor
+                button.style.borderColor = buttonColor
+                button.textContent = label
+    
+                div.appendChild(button)
+                this.levelButtons.push(button)
+            }
         }
-    }   
-}
-
-function updateScaleDisplay(state) {
-    scaleDisplay.textContent = state.currentScale
-}
-
-function updateFingeringDisplay(state) {
-    fingeringDisplay.textContent = `${state.pattern}, ${state.stroke}`
-}
-
-function updateNextButton(state) {
-    if (state.i == state.scales.length - 1) {
-        nextButton.disabled = true
     }
-    else {
-        nextButton.disabled = false
+
+    updateLevelButtons(model) {
+        for (let button of this.levelButtons) {
+            let buttonColor = levelData[button.textContent].color
+            button.style.color = buttonColor
+            button.style.borderColor = buttonColor
+            button.style.backgroundColor = "white"
+    
+            if (button.textContent == model.level) {
+                button.style.color = "white"
+                button.style.backgroundColor = buttonColor
+            }
+        }
+    }
+
+    updateScaleDisplay(model) {
+        this.scaleDisplay.textContent = model.currentScale
+    }
+
+    updateFingeringDisplay(model) {
+        this.fingeringDisplay.textContent = `${model.pattern}, ${model.stroke}`
+    }
+
+    updateNextButton(model) {
+        if (model.i == model.scales.length - 1) {
+            this.nextButton.disabled = true
+        }
+        else {
+            this.nextButton.disabled = false
+        }
+    }
+
+    updateProgressDisplay(model) {
+        this.progressDisplayText.textContent = `${model.i + 1} of ${model.scales.length}`
     }
 }
 
-function updateProgressDisplay(state) {
-    progressDisplayText.textContent = `${state.i + 1} of ${state.scales.length}`
-}
-
-export { 
-    levelButtons, 
-    nextButton, 
-    resetButton, 
-    updateView
-}
+export { View }
