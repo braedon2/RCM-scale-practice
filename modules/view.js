@@ -55,7 +55,7 @@ class View {
             button.style.borderColor = buttonColor
             button.style.backgroundColor = "white"
     
-            if (button.textContent == model.level) {
+            if (button.textContent == model.levelName) {
                 button.style.color = "white"
                 button.style.backgroundColor = buttonColor
             }
@@ -63,15 +63,15 @@ class View {
     }
 
     updateScaleDisplay(model) {
-        this.scaleDisplay.textContent = model.currentScale
+        this.scaleDisplay.textContent = model.getScale()
     }
 
     updateFingeringDisplay(model) {
-        this.fingeringDisplay.textContent = `${model.pattern}, ${model.stroke}`
+        this.fingeringDisplay.textContent = `${model.getPattern()}, ${model.getStroke()}`
     }
 
     updateNextButton(model) {
-        if (model.i == model.scales.length - 1) {
+        if (model.i == model.shuffledScales.length - 1) {
             this.nextButton.disabled = true
         }
         else {
@@ -80,7 +80,7 @@ class View {
     }
 
     updateProgressDisplay(model) {
-        this.progressDisplayText.textContent = `${model.i + 1} of ${model.scales.length}`
+        this.progressDisplayText.textContent = `${model.i + 1} of ${model.shuffledScales.length}`
     }
 }
 
