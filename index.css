@@ -13,7 +13,6 @@ body {
 }
 
 header {
-    color: #333;
     background-color: #f8f8f8;
     border-bottom: 1px #e7e7e7 solid;
     margin-bottom: 24px;
@@ -35,15 +34,15 @@ img {
 }
 
 button {
-    font-size: 10px;
+    font-size: 12px;
     font-family: Arial,sans-serif;
     border-radius: 20px;
     border: 2px solid;
     width: 80px;
     height: 40px;
     background-color: white;
-    color: black;
-    border-color: black;
+    color: #444;
+    border-color: #444;
 }
 
 @media screen and (min-width: 450px) {
@@ -56,7 +55,6 @@ button {
 }
 
 footer {
-    color: #333;
     background-color: #f8f8f8;
     border-top: 1px #e7e7e7 solid;
     display: flex;
@@ -142,6 +140,24 @@ footer p {
 .progress-text {
     text-align: center;
     margin-bottom: 24px;
+}
+
+.progress-bar {
+    padding: 4px;
+    margin: auto;
+    margin-bottom: 24px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 13px;
+    height: 18px;
+    width: 336px /* width of mobile level container */
+}
+
+.progress-bar div {
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    height: 100%;
+    transition: width 0.4s ease-in-out;
 }
 
 .github {

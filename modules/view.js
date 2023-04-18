@@ -7,7 +7,8 @@ class View {
         this.resetButton = document.querySelectorAll(".next-reset-container button")[1]
         this.scaleDisplay = document.querySelector(".scale")
         this.fingeringDisplay = document.querySelector(".fingering")
-        this.progressDisplayText = document.querySelector(".progress-text")
+        this.progressTextDisplay = document.querySelector(".progress-text")
+        this.progressBarDisplay = document.querySelector(".progress-bar div")
 
         this.initView()
         this.updateView(model)
@@ -23,6 +24,7 @@ class View {
         this.updateFingeringDisplay(model)
         this.updateNextButton(model)
         this.updateProgressDisplay(model)
+        this.updateProgressBar(model)
     }
 
     initLevelButtons() {
@@ -80,7 +82,23 @@ class View {
     }
 
     updateProgressDisplay(model) {
-        this.progressDisplayText.textContent = `${model.i + 1} of ${model.shuffledScales.length}`
+        this.progressTextDisplay.textContent = `${model.i + 1} of ${model.shuffledScales.length}`
+    }
+
+    updateProgressBar(model) {
+        this.progressBarDisplay.style.backgroundColor = levelData[model.levelName].color
+
+        let width_percent = `${Math.floor((model.i + 1) / model.shuffledScales.length * 100)}%`
+        this.progressBarDisplay.style.width = width_percent
+
+        if (model.i + 1 == model.shuffledScales.length) {
+            this.progressBarDisplay.style.borderTopRightRadius = '9px'
+            this.progressBarDisplay.style.borderBottomRightRadius = '9px'
+        }
+        else {
+            this.progressBarDisplay.style.borderTopRightRadius = '0px'
+            this.progressBarDisplay.style.borderBottomRightRadius = '0px'
+        }
     }
 }
 
