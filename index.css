@@ -89,11 +89,6 @@ footer p {
     gap: 8px
 }
 
-.level-container div {
-    display: flex;
-    gap: 8px
-}
-
 .next-reset-container {
     display: flex;
     justify-content: center;
@@ -150,7 +145,15 @@ footer p {
     border-color: black;
     border-radius: 13px;
     height: 18px;
-    width: 336px /* width of mobile level container */
+    width: 336px; 
+    border: 2px solid;
+    display: none;
+}
+
+@media screen and (min-width: 450px) {
+.progress-bar {
+    display: block;
+}
 }
 
 .progress-bar div {

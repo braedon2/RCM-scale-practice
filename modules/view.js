@@ -30,23 +30,16 @@ class View {
     initLevelButtons() {
         const button_container = document.querySelector(".level-container")
         const buttonsToRender = Object.keys(levelData)
-        const firstRowToRender = buttonsToRender.slice(0, buttonsToRender.length/2)
-        const secondRowToRender = buttonsToRender.slice(buttonsToRender.length/2)
 
-        for (let row of [firstRowToRender, secondRowToRender]) {
-            let div = document.createElement("div")
-            button_container.appendChild(div)
+        for (let label of buttonsToRender) {
+            let buttonColor = levelData[label].color
+            let button = document.createElement("button")
+            button.style.color = buttonColor
+            button.style.borderColor = buttonColor
+            button.textContent = label
 
-            for (let label of row) {
-                let buttonColor = levelData[label].color
-                let button = document.createElement("button")
-                button.style.color = buttonColor
-                button.style.borderColor = buttonColor
-                button.textContent = label
-    
-                div.appendChild(button)
-                this.levelButtons.push(button)
-            }
+            button_container.appendChild(button)
+            this.levelButtons.push(button)
         }
     }
 

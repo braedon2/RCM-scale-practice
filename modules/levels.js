@@ -1,4 +1,16 @@
 export const levelData = {
+    "Prep": {
+        "scales": [
+            "C Major",
+            "A Minor Harmonic",
+            "A Minor Melodic",
+            "G Major",
+            "E Minor Harmonic",
+            "E Minor Melodic"
+        ],
+        "patterns": ["im", "mi", "ma", "am"],
+        "color": "gold"
+    },
     "Level 1": { 
         "scales": [
             "G Major", 
@@ -107,14 +119,66 @@ export const levelData = {
     },
     "Level 7": {
         "scales": [
-            "hi"
+            "G Major",
+            "E Minor Harmonic",
+            "E Minor Melodic",
+            "E Major",
+            "C# Minor Harmonic",
+            "C# Minor Melodic",
+            "F Major",
+            "D Minor Harmonic",
+            "D Minor Melodic",
+            "A♭ Major",
+            "F Minor Harmonic",
+            "F Minor Melodic",
+            "D♭ Major",
+            "B♭ Minor Harmonic",
+            "B♭ Minor Melodic",
+            "Chromatic on A"
         ],
         "patterns": ["im", "mi", "ma", "am", "ia", "ai"],
         "color": "#5e2119"
     },
     "Level 8": {
         "scales": [
-            "hi, hello"
+            "E Major",
+            "C# Minor Harmonic",
+            "C# Minor Melodic",
+            "B Major",
+            "G# Minor Harmonic",
+            "G# Minor Melodic",
+            "F Major",
+            "D Minor Harmonic",
+            "D Minor Melodic",
+            "B♭ Major",
+            "G Minor Harmonic",
+            "G Minor Melodic",
+            "A♭ Major",
+            "F Minor Harmonic",
+            "F Minor Melodic",
+            "Chromatic on A#"
+        ],
+        "patterns": ["im", "mi", "ma", "am", "ia", "ai"],
+        "color": "#352125"
+    },
+    "Level 9": {
+        "scales": [
+            "C Major",
+            "A Minor Harmonic",
+            "A Minor Melodic",
+            "A Major",
+            "F# Minor Harmonic",
+            "F# Minor Melodic",
+            "E Major",
+            "C# Minor Harmonic",
+            "C# Minor Melodic",
+            "B Major",
+            "G# Minor Harmonic",
+            "G# Minor Melodic",
+            "F Major",
+            "D Minor Harmonic",
+            "D Minor Melodic",
+            "Chromatic on B"
         ],
         "patterns": ["im", "mi", "ma", "am", "ia", "ai"],
         "color": "#352125"
