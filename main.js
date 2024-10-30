@@ -1,11 +1,13 @@
 import { levelData } from "./modules/levels.js"
 import { View } from "./modules/view.js"
 import { Model } from "./modules/model.js"
+import { getCurrentLevelOrDefault, setCurrentLevel } from "./modules/storage.js"
 
+let currentOrDefaultLevel = getCurrentLevelOrDefault()
 let model = new Model(
-    "Level 1", 
-    shuffleArray(levelData["Level 1"].scales),
-    levelData["Level 1"].patterns
+    currentOrDefaultLevel, 
+    shuffleArray(levelData[currentOrDefaultLevel].scales),
+    levelData[currentOrDefaultLevel].patterns
 )
 
 let view = new View(model)
@@ -24,6 +26,7 @@ function levelButtonListener(event) {
         levelData[levelName].patterns
     )
     view.updateView(model)
+    setCurrentLevel(levelName)
 }
 
 function nextButtonListener() {
